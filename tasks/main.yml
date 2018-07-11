@@ -1,3 +1,5 @@
 - name: Copy files
-  copy: src="{{ item.src }}" dest="{{ item.dest }}"
+  copy:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
   with_items: versioned_deployment_config_files
