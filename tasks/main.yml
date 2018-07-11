@@ -1,6 +1,6 @@
 ---
-- name: Copy files
+- name: Copy config files
   copy:
     src: "{{ item.src }}"
     dest: "{{ item.dest }}"
-  with_items: versioned_deployment_config_files
+  with_items: "{{ versioned_deployment_config_files }}"
